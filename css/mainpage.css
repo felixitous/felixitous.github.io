@@ -1,0 +1,235 @@
+@import url(https://fonts.googleapis.com/css?family=Muli);
+
+body {
+	margin: 0;
+	background-color: #F2F1E3;
+	font-family: "Muli", sans-serif;
+}
+
+.main-blue {
+	background-color: #2C7E8E !important;
+}
+
+.dark-blue {
+	background-color: #2B6A8C !important;
+}
+
+.main-background {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	background-color: #F2F1E3;
+	background-image: url("../images/background.jpg");
+	background-size: cover;
+	opacity: 0.3;
+	z-index: -1;
+}
+
+.circle-maker {
+	position: absolute;
+	margin: auto;
+	top: -100; right: 0; left: 0; bottom: 0;
+	border-top-left-radius: 150px;
+	border-top-right-radius: 150px;
+	/*border-radius: 50px;*/
+	width: 300px;
+	height: 150px;
+	background-color: #2C7E8E;
+}
+
+.profile-pic {
+	position: absolute;
+	margin: auto;
+	top: 150; right: 0; left: 0; bottom: 0;
+	width: 280px;
+	height: 280px;
+	border-radius: 280px;
+	background-image: url("../images/felix.jpg");
+	background-size: cover;
+}
+
+.introduction {
+	position: absolute;
+	margin: auto;
+	height: 50px;
+	bottom: 140;
+	width: 100%;
+	color: #F2F1E3;
+	text-align: center;
+	font-size: 50px;
+}
+
+/*.introduction-page {
+	position: relative;
+	height: 40%;
+	width: 100%;
+}*/
+
+#introduction-paragraph {
+	margin: 0 auto;
+	position: relative;
+	font-size: 20px;
+	width: 70%;
+	text-align: justify;
+}
+
+.custom-arrow {
+	position: absolute;
+	margin: auto;
+	text-align: center;
+	right: 0; left: 0; bottom: 15;
+	color: #F2F1E3;
+	opacity: 0;
+}
+
+.light-blue {
+	color: #2C7E8E;
+	font-weight: bold;
+}
+
+.top-folder {
+	width: 100%;
+	height: 50%;
+	background-color: #2C7E8E;
+}
+
+.project-page {
+	position: relative;
+	width: 100%;
+	height: 50%;
+	background-color: #2CA399;
+	overflow: hidden;
+}
+
+.container {
+	width: 70%;
+	position: relative;
+	margin: auto;
+}
+
+.project-picture {
+	position: relative;
+	float: left;
+	height: 100%;	
+	/*height: 50%;*/
+	width: calc(100% / 2 );
+	/*background-color: black;*/
+}
+
+.project-description {
+	position: relative;
+	float: right;
+	height: 100%;
+	width: calc(100% / 2);
+}
+
+.invert-picture {
+	float: right;
+}
+
+.invert-description {
+	float: left;
+}
+
+.project-description-paragraph {
+	position: relative;
+	font-size: 20px;
+	margin: 0;
+	text-align: justify;
+	color: #F2F1E3;
+}
+
+.project-picture-holder {
+	position: absolute;
+	margin: auto;
+	top: 0; left: 0; right: 0; bottom: 0;
+	height: 300px;
+	width: 300px;
+	border-radius: 300px;
+	background-color: green;
+	background-image: url(../images/voyager.png);
+	background-size: cover;
+	background-position: center;
+}
+
+.decal-picture {
+	background-image: url(../images/decal.png);
+}
+
+.mousehunt-picture {
+	background-image: url(../images/mousehunt.jpg);
+}
+
+.surveymonkey-logo {
+	background-image: url(../images/surveymonkey-logo.svg);
+}
+
+.company-page {
+	position: relative;
+	background-color: #F2F1E3;
+	height: 50%;
+	width: 100%;
+}
+
+.company-logo {
+	height: 33%;
+	width: 100%;
+	text-align: center;
+}
+
+.company-logo img {
+	max-height: 100%;
+	max-width: 100%;
+}
+
+.company-description {
+	height: 64%;
+	width: 100%;
+	/*background-color: black;*/
+}
+
+.company-description-paragraph {
+	color: black;
+	font-size: 20px;
+	text-align: justify;
+
+}
+
+.company-container {
+	width: 70%;
+	margin: auto;
+}
+
+.footer {
+	height: 25%;
+	width: 100%;
+	background-color: #2C7E8E;
+	overflow: auto;
+}
+
+.links {
+	height: 50%;
+	width: 100%;
+}
+
+.icons {
+	height: 75%;
+	width: 100%;
+	text-align: center;
+}
+
+.custom-link {
+	color: #F2F1E3;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+.copyright {
+	text-align: center;
+	color: #F2F1E3;
+}
+
+#content {
+	font-family: 'Muli', sans-serif;
+}
