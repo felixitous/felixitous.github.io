@@ -50,12 +50,13 @@ function elasticPlacing() {
 		$(".project-page").css("height", "50%");
 		paragraphGrid("#introduction-paragraph", screenHeight);
 		paragraphGrid(".project-description-paragraph", screenHeight);
-		console.log(width)
+		$(".company-page").css("height", "50%");
 	} else if (width < 772) {
 		$(".project-picture").css({"width": "100%", "height": window.innerHeight / 2 });
 		$(".project-description").css({"width": "100%", "height": window.innerHeight / 2});
-	    $(".project-description").css("padding-top", 0);
+	    $(".project-description-paragraph").css("padding-top", 0);
 		$(".project-page").css("height", "100%");
+		$(".company-page").css("height", "75%");
 
 	} else if (width >= 1200) {
 		$(".container").css("width", "70%");
@@ -64,6 +65,8 @@ function elasticPlacing() {
 		$(".project-picture").css("width", "50%");
 		$(".project-description").css("width", "50%");
 		$(".project-page").css("height", "50%");
+		$(".company-page").css("height", "50%");
+
 	}	
 }
 
