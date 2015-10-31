@@ -40,18 +40,47 @@ function footerGrid(target, height) {
 	$(target).css("margin-bottom", margin / 2);
 }
 
-folderHeight();
-paragraphGrid("#introduction-paragraph", screenHeight);
-paragraphGrid(".project-description-paragraph", screenHeight);
-companyGrid(".company-container", screenHeight / 2);
-footerGrid(".links", screenHeight / 2);
+function elasticPlacing() {
+	var width = window.innerWidth;
+	console.log(window.innerWidth);
+	if (772 <= width && width < 1200) {
+		$(".container").css("width", "90%");
+		$(".project-picture").css("width", "50%");
+		$(".project-description").css("width", "50%");
+		$(".project-page").css("height", "50%");
+		paragraphGrid("#introduction-paragraph", screenHeight);
+		paragraphGrid(".project-description-paragraph", screenHeight);
+		console.log(width)
+	} else if (width < 772) {
+		$(".project-picture").css({"width": "100%", "height": window.innerHeight / 2 });
+		$(".project-description").css({"width": "100%", "height": window.innerHeight / 2});
+	    $(".project-description").css("padding-top", 0);
+		$(".project-page").css("height", "100%");
+
+	} else if (width >= 1200) {
+		$(".container").css("width", "70%");
+		paragraphGrid("#introduction-paragraph", screenHeight);
+		paragraphGrid(".project-description-paragraph", screenHeight);
+		$(".project-picture").css("width", "50%");
+		$(".project-description").css("width", "50%");
+		$(".project-page").css("height", "50%");
+	}	
+}
+
+$(document).ready(function() {
+	folderHeight();
+	paragraphGrid("#introduction-paragraph", screenHeight);
+	paragraphGrid(".project-description-paragraph", screenHeight);
+	companyGrid(".company-container", screenHeight / 2);
+	footerGrid(".links", screenHeight / 2);
+	elasticPlacing();
+});
 
 $(window).resize(function() {
     folderHeight();
-    paragraphGrid("#introduction-paragraph", screenHeight);
-    paragraphGrid(".project-description-paragraph", screenHeight);
     companyGrid(".company-container", screenHeight / 2);
     footerGrid(".links", screenHeight / 2);
+    elasticPlacing();
 
 });
 
