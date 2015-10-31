@@ -20,6 +20,7 @@ $(window).load(function() {
 // paragraph gridding
 function paragraphGrid(target, height) {
     paragraphHeight = $(target).height();
+    console.log(paragraphHeight);
     padding = height / 2 - paragraphHeight
     $(target).css("padding-top", padding / 2);
     $(target).css("padding-bottom", padding / 2);
@@ -49,7 +50,9 @@ function elasticPlacing() {
 		$(".project-description").css("width", "50%");
 		$(".project-page").css("height", "50%");
 		paragraphGrid("#introduction-paragraph", screenHeight);
-		paragraphGrid(".project-description-paragraph", screenHeight);
+		paragraphGrid(".pdp-1", screenHeight);
+		paragraphGrid(".pdp-2", screenHeight);
+		paragraphGrid(".pdp-3", screenHeight);
 		$(".company-page").css("height", "50%");
 	} else if (width < 772) {
 		$(".project-picture").css({"width": "100%", "height": window.innerHeight / 2 });
@@ -58,10 +61,12 @@ function elasticPlacing() {
 		$(".project-page").css("height", "100%");
 		$(".company-page").css("height", "75%");
 
-	} else if (width >= 1200) {
+	} else if (1200 <= width) {
 		$(".container").css("width", "70%");
 		paragraphGrid("#introduction-paragraph", screenHeight);
-		paragraphGrid(".project-description-paragraph", screenHeight);
+		paragraphGrid(".pdp-1", screenHeight);
+		paragraphGrid(".pdp-2", screenHeight);
+		paragraphGrid(".pdp-3", screenHeight);
 		$(".project-picture").css("width", "50%");
 		$(".project-description").css("width", "50%");
 		$(".project-page").css("height", "50%");
@@ -72,8 +77,6 @@ function elasticPlacing() {
 
 $(document).ready(function() {
 	folderHeight();
-	paragraphGrid("#introduction-paragraph", screenHeight);
-	paragraphGrid(".project-description-paragraph", screenHeight);
 	companyGrid(".company-container", screenHeight / 2);
 	footerGrid(".links", screenHeight / 2);
 	elasticPlacing();
