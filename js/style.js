@@ -15,13 +15,14 @@ $(window).load(function() {
         yoyo: true,
         repeat: -1
     });
+	elasticPlacing();
 });
 
 // paragraph gridding
 function paragraphGrid(target, height) {
     paragraphHeight = $(target).height();
     console.log(paragraphHeight);
-    padding = height / 2 - paragraphHeight
+    padding = (height / 2) - paragraphHeight
     $(target).css("padding-top", padding / 2);
     $(target).css("padding-bottom", padding / 2);
 }
@@ -64,7 +65,7 @@ function elasticPlacing() {
 	} else if (1200 <= width) {
 		$(".container").css("width", "70%");
 		paragraphGrid("#introduction-paragraph", screenHeight);
-		paragraphGrid(".pdp-1", screenHeight);
+		paragraphGrid(".pdp-1", 801);
 		paragraphGrid(".pdp-2", screenHeight);
 		paragraphGrid(".pdp-3", screenHeight);
 		$(".project-picture").css("width", "50%");
@@ -79,7 +80,6 @@ $(document).ready(function() {
 	folderHeight();
 	companyGrid(".company-container", screenHeight / 2);
 	footerGrid(".links", screenHeight / 2);
-	elasticPlacing();
 });
 
 $(window).resize(function() {
