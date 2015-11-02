@@ -54,13 +54,13 @@ function elasticPlacing() {
 		paragraphGrid(".pdp-1", screenHeight);
 		paragraphGrid(".pdp-2", screenHeight);
 		paragraphGrid(".pdp-3", screenHeight);
-		$(".company-page").css("height", "50%");
+		// $(".company-page").css("height", "50%");
 	} else if (width < 772) {
 		$(".project-picture").css({"width": "100%", "height": window.innerHeight / 2 });
 		$(".project-description").css({"width": "100%", "height": window.innerHeight / 2});
 	    $(".project-description-paragraph").css("padding-top", 0);
 		$(".project-page").css("height", "100%");
-		$(".company-page").css("height", "75%");
+		// $(".company-page").css("height", "75%");
 
 	} else if (1200 <= width) {
 		$(".container").css("width", "70%");
@@ -71,20 +71,20 @@ function elasticPlacing() {
 		$(".project-picture").css("width", "50%");
 		$(".project-description").css("width", "50%");
 		$(".project-page").css("height", "50%");
-		$(".company-page").css("height", "50%");
+		// $(".company-page").css("height", "50%");
 
 	}	
 }
 
 $(document).ready(function() {
 	folderHeight();
-	companyGrid(".company-container", screenHeight / 2);
+	// companyGrid(".company-container", screenHeight / 2);
 	footerGrid(".links", screenHeight / 2);
 });
 
 $(window).resize(function() {
     folderHeight();
-    companyGrid(".company-container", screenHeight / 2);
+    // companyGrid(".company-container", screenHeight / 2);
     footerGrid(".links", screenHeight / 2);
     elasticPlacing();
 
