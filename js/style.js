@@ -15,6 +15,10 @@ $(window).load(function() {
         yoyo: true,
         repeat: -1
     });
+    TweenMax.to(".loading-background", 0.3, {
+    	opacity: 0,
+    	display: "none"
+    });
 	elasticPlacing();
 });
 
