@@ -46,14 +46,27 @@ function companyGrid(target, height) {
 
 //footer gridding
 function footerGrid(target, height) {
-	margin = height / 4;
+	linkHeight = $(target).height();
+	margin = height - linkHeight;
 	$(target).css("margin-top", margin / 2);
 	$(target).css("margin-bottom", margin / 2);
 }
 
+function projectSelection() {
+	$(".project-picture-holder").mouseenter(function() {
+		TweenMax.to(this, 0.3, {
+			borderColor: "black"
+		});
+	});
+	$(".project-picture-holder").mouseleave(function() {
+		TweenMax.to(this, 0.3, {
+			borderColor: "transparent"
+		});
+	});
+}
+
 function elasticPlacing() {
 	var width = window.innerWidth;
-	console.log(window.innerWidth);
 	paragraphGrid(".pdp-1", 800);
 	paragraphGrid(".pdp-2", 800);
 	paragraphGrid(".pdp-3", 800);
@@ -63,7 +76,6 @@ function elasticPlacing() {
 		$(".project-description").css("width", "50%");
 		$(".project-page").css("height", "50%");
 		paragraphGrid("#introduction-paragraph", window.innerHeight);
-		// $(".company-page").css("height", "50%");
 	} else if (width < 772) {
 		paragraphGrid("#introduction-paragraph", window.innerHeight);
 		$(".project-picture").css({"width": "100%", "height": window.innerHeight / 2 });
@@ -71,7 +83,6 @@ function elasticPlacing() {
 	    $(".project-description-paragraph").css("padding-top", 0);
 	    $(".project-description-paragraph").css("padding-bottom", 0);
 		$(".project-page").css("height", "100%");
-		// $(".company-page").css("height", "75%");
 
 	} else if (1200 <= width) {
 		$(".container").css("width", "70%");
@@ -79,9 +90,19 @@ function elasticPlacing() {
 		$(".project-picture").css("width", "50%");
 		$(".project-description").css("width", "50%");
 		$(".project-page").css("height", "400px");
-		// $(".company-page").css("height", "50%");
-
 	}	
+}
+
+function redirect() {
+	$(".voyager-picture").click(function() {
+		window.location.href = "http://www.voyagerconsulting.org"
+	});
+	$(".decal-picture").click(function() {
+		window.location.href = "http://decal.herokuapp.com"
+	});
+	$(".mousehunt-picture").click(function() {
+		window.location.href = "https://github.com/felixitous/automation"
+	});
 }
 
 function heightPlacing() {
@@ -94,13 +115,15 @@ function heightPlacing() {
 }
 
 $(document).ready(function() {
+	redirect();
 	folderHeight();
-	footerGrid(".links", screenHeight / 2);
+	footerGrid(".links", 200);
+	projectSelection();
 });
 
 $(window).resize(function() {
     folderHeight();
-    footerGrid(".links", screenHeight / 2);
+    footerGrid(".links", 200);
     heightPlacing();
     elasticPlacing();
 

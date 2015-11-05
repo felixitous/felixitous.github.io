@@ -31,18 +31,17 @@ body {
 	background-color: #F2F1E3;
 	background-image: url("../images/background.jpg");
 	background-size: cover;
-	opacity: 0.3;
+	opacity: 0.5;
 	z-index: -1;
 }
 
 .circle-maker {
 	position: absolute;
 	margin: auto;
-	top: -100; right: 0; left: 0; bottom: 0;
-	border-top-left-radius: 150px;
-	border-top-right-radius: 150px;
+	top: 50; right: 0; left: 0; bottom: 0;
+	border-radius: 150px;
 	width: 300px;
-	height: 150px;
+	height: 300px;
 	background-color: #2C7E8E;
 	z-index: 1;
 }
@@ -50,7 +49,7 @@ body {
 .profile-pic {
 	position: absolute;
 	margin: auto;
-	top: 150; right: 0; left: 0; bottom: 0;
+	top: 0; right: 0; left: 0; bottom: 0;
 	width: 280px;
 	height: 280px;
 	border-radius: 280px;
@@ -164,7 +163,14 @@ body {
 	background-color: #F2F1E3;
 	background-image: url(../images/voyager.png);
 	background-size: cover;
+	background-origin: border-box;
 	background-position: center;
+	background-repeat: no-repeat;
+	border: 5px transparent solid;
+}
+
+.project-picture-holder:hover {
+	cursor: pointer;
 }
 
 .decal-picture {
@@ -227,7 +233,7 @@ body {
 }
 
 .footer {
-	height: 25%;
+	height: 200px;
 	width: 100%;
 	background-color: #2C7E8E;
 	overflow: auto;
