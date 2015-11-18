@@ -179,7 +179,7 @@ initialDisplay()
 $(window).scroll(function() {
 	var scrollValue = $(window).scrollTop();
 	console.log(containerSelection.offset().top);
-	if (containerSelection.offset().top - 400 < scrollValue) {
+	if (containerSelection.offset().top - 500 < scrollValue) {
 		containerAnimation(containerSelection.get(0));
 		containerSelection = containerSelection.next()
 	};
