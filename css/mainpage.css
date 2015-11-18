@@ -128,12 +128,14 @@ body {
 	/*height: 50%;*/
 	background-color: #74AFAB;
 	overflow: hidden;
+	opacity: 0;
 }
 
 .container {
 	width: 70%;
 	position: relative;
 	margin: auto;
+	/*opacity: 0;*/
 }
 
 .project-picture {

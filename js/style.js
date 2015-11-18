@@ -5,25 +5,6 @@ function folderHeight() {
     
 }
 
-
-// main page arrow down animation
-$(window).load(function() {
-    var target = $(".custom-arrow");
-    TweenMax.to(target, 1, {
-        bottom: 10,
-        opacity: 1,
-        ease: Power4.easeInOut,
-        yoyo: true,
-        repeat: -1
-    });
-    TweenMax.to(".loading-background", 0.3, {
-    	opacity: 0,
-    	display: "none"
-    });
-	elasticPlacing();
-	heightPlacing();
-});
-
 // paragraph gridding
 function paragraphGrid(target, height) {
     paragraphHeight = $(target).height();
@@ -143,6 +124,24 @@ function heightPlacing() {
 	}
 }
 
+// main page arrow down animation
+$(window).load(function() {
+    var target = $(".custom-arrow");
+    TweenMax.to(target, 1, {
+        bottom: 10,
+        opacity: 1,
+        ease: Power4.easeInOut,
+        yoyo: true,
+        repeat: -1
+    });
+    TweenMax.to(".loading-background", 0.3, {
+    	opacity: 0,
+    	display: "none"
+    });
+	elasticPlacing();
+	heightPlacing();
+});
+
 $(document).ready(function() {
 	redirect();
 	folderHeight();
@@ -159,4 +158,34 @@ $(window).resize(function() {
 
 });
 
-// project picture holder
+function containerAnimation(target) {
+	TweenMax.to(target, 1, {
+		opacity: 1
+	});
+};
+
+containerSelection = $('.project-page');
+
+function initialDisplay() {
+	var scrollValue = $(window).scrollTop()
+	while (containerSelection.offset().top < scrollValue) {
+		containerAnimation(containerSelection.get(0));
+		containerSelection = containerSelection.next()
+	}
+}
+
+initialDisplay()
+
+$(window).scroll(function() {
+	var scrollValue = $(window).scrollTop();
+	console.log(containerSelection.offset().top);
+	if (containerSelection.offset().top - 400 < scrollValue) {
+		containerAnimation(containerSelection.get(0));
+		containerSelection = containerSelection.next()
+	};
+})
+
+
+
+
+
