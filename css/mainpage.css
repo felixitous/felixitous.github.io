@@ -1,8 +1,12 @@
 @import url(https://fonts.googleapis.com/css?family=Muli);
 
+@-moz-keyframes spin { 100% { -moz-transform: rotate(-360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(-360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(-360deg); transform:rotate(-360deg); } }
+
 body {
 	margin: 0;
-	background-color: #F2F1E3;
+	background-color: #FFFDEF;
 	font-family: "Muli", sans-serif;
 }
 
@@ -18,9 +22,21 @@ body {
 	position: fixed;
 	width: 100%;
 	height: 100%;
-	background-color: #F2F1E3;
+	background-color: #FFFDEF;
 	z-index: 2;
 	top: 0;
+}
+
+.loading-logo {
+	position: absolute;
+	margin: auto;
+	top: 0; bottom: 0; left: 0; right: 0;
+	height: 300px;
+	width: 300px;
+	-webkit-animation:spin 2s linear infinite;
+	-moz-animation:spin 2s linear infinite;
+	animation:spin 2s linear infinite;
+	/*background-color: black;*/
 }
 
 .main-background {
@@ -28,7 +44,7 @@ body {
 	width: 100%;
 	height: 100%;
 	top: 0;
-	background-color: #F2F1E3;
+	background-color: #FFFDEF;
 	background-image: url("../images/background.jpg");
 	background-size: cover;
 	opacity: 0.5;
@@ -64,7 +80,7 @@ body {
 	/*bottom: 150;*/
 	/*bottom: 20%;*/
 	width: 100%;
-	color: #F2F1E3;
+	color: #FFFDEF;
 	text-align: center;
 	font-size: 50px;
 	padding-top: 190px;
@@ -79,9 +95,9 @@ body {
 #introduction-paragraph {
 	margin: 0 auto;
 	position: relative;
-	font-size: 20px;
+	font-size: 25px;
 	width: 70%;
-	text-align: justify;
+	/*text-align: justify;*/
 }
 
 .custom-arrow {
@@ -89,7 +105,7 @@ body {
 	margin: auto;
 	text-align: center;
 	right: 0; left: 0; bottom: 15;
-	color: #F2F1E3;
+	color: #FFFDEF;
 	opacity: 0;
 }
 
@@ -150,7 +166,7 @@ body {
 	font-size: 20px;
 	margin: 0;
 	text-align: justify;
-	color: #F2F1E3;
+	color: #FFFDEF;
 }
 
 .project-picture-holder {
@@ -160,7 +176,7 @@ body {
 	height: 300px;
 	width: 300px;
 	border-radius: 300px;
-	background-color: #F2F1E3;
+	background-color: #FFFDEF;
 	background-image: url(../images/voyager.png);
 	background-size: cover;
 	background-origin: border-box;
@@ -187,7 +203,7 @@ body {
 
 .company-page {
 	position: relative;
-	background-color: #F2F1E3;
+	background-color: #FFFDEF;
 	/*height: 50%;*/
 	width: 100%;
 }
@@ -251,14 +267,18 @@ body {
 }
 
 .custom-link {
-	color: #F2F1E3;
+	color: #FFFDEF;
 	margin-left: 5px;
 	margin-right: 5px;
 }
 
+.custom-link:hover {
+	cursor: pointer;
+}
+
 .copyright {
 	text-align: center;
-	color: #F2F1E3;
+	color: #FFFDEF;
 }
 
 #content {

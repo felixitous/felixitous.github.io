@@ -103,7 +103,36 @@ function redirect() {
 	$(".mousehunt-picture").click(function() {
 		window.location.href = "https://github.com/felixitous/automation"
 	});
+	$(".fa-linkedin").click(function() {
+		window.location.href = "https://www.linkedin.com/in/felixwenshanliu"
+	});
+	$(".fa-facebook-official").click(function() {
+		window.location.href = "https://www.facebook.com/DenimJacketsArentDeceiving"
+	});
+	$(".fa-github").click(function() {
+		window.location.href = "https://github.com/felixitous"
+	});
+	$(".fa-envelope").click(function() {
+		window.location.href = "mailto:felixmbx@gmail.com"
+	});
 }
+
+function footerHover() {
+	var target = $(".custom-link")
+
+	$(target).mouseenter(function() {
+		TweenMax.to(this, 0.5, {
+			color: '#74AFAB'
+		});
+	});
+
+	$(target).mouseleave(function() {
+		TweenMax.to(this, 0.5, {
+			color: "#FFFDEF"
+		});
+	});
+}
+
 
 function heightPlacing() {
 	var height = window.innerHeight;
@@ -119,6 +148,7 @@ $(document).ready(function() {
 	folderHeight();
 	footerGrid(".links", 200);
 	projectSelection();
+	footerHover();
 });
 
 $(window).resize(function() {
