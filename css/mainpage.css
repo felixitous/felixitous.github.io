@@ -131,6 +131,10 @@ body {
 	opacity: 0;
 }
 
+.first-one {
+	opacity: 1;
+}
+
 .container {
 	width: 70%;
 	position: relative;
