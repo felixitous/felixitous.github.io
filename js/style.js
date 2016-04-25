@@ -2,7 +2,7 @@
 function folderHeight() {
     screenHeight = window.innerHeight;
     $(".top-folder").css("margin-top", screenHeight / 2);
-    
+
 }
 
 // paragraph gridding
@@ -11,7 +11,7 @@ function paragraphGrid(target, height) {
     padding = (height / 2) - paragraphHeight
     padding = padding / 2
     if (padding <= 30) {
-    	padding = 50
+        padding = 50
     }
     $(target).css("padding-top", padding);
     $(target).css("padding-bottom", padding);
@@ -19,7 +19,7 @@ function paragraphGrid(target, height) {
 
 //company gridding
 function companyGrid(target, height) {
-	padding = height / 2;
+    padding = height / 2;
     $(target).css("padding-top", padding / 2);
     $(target).css("padding-bottom", padding / 2);
     $(target).css("height", height - padding);
@@ -27,101 +27,107 @@ function companyGrid(target, height) {
 
 //footer gridding
 function footerGrid(target, height) {
-	linkHeight = $(target).height();
-	margin = height - linkHeight;
-	$(target).css("margin-top", margin / 2);
-	$(target).css("margin-bottom", margin / 2);
+    linkHeight = $(target).height();
+    margin = height - linkHeight;
+    $(target).css("margin-top", margin / 2);
+    $(target).css("margin-bottom", margin / 2);
 }
 
 function projectSelection() {
-	$(".project-picture-holder").mouseenter(function() {
-		TweenMax.to(this, 0.3, {
-			borderColor: "black"
-		});
-	});
-	$(".project-picture-holder").mouseleave(function() {
-		TweenMax.to(this, 0.3, {
-			borderColor: "transparent"
-		});
-	});
+    $(".project-picture-holder").mouseenter(function() {
+        TweenMax.to(this, 0.3, {
+            borderColor: "black"
+        });
+    });
+    $(".project-picture-holder").mouseleave(function() {
+        TweenMax.to(this, 0.3, {
+            borderColor: "transparent"
+        });
+    });
 }
 
 function elasticPlacing() {
-	var width = window.innerWidth;
-	paragraphGrid(".pdp-1", 800);
-	paragraphGrid(".pdp-2", 800);
-	paragraphGrid(".pdp-3", 800);
-	if (772 <= width && width < 1200) {
-		$(".container").css("width", "90%");
-		$(".project-picture").css("width", "50%");
-		$(".project-description").css("width", "50%");
-		$(".project-page").css("height", "50%");
-		paragraphGrid("#introduction-paragraph", window.innerHeight);
-	} else if (width < 772) {
-		paragraphGrid("#introduction-paragraph", window.innerHeight);
-		$(".project-picture").css({"width": "100%", "height": window.innerHeight / 2 });
-		$(".project-description").css({"width": "100%", "height": window.innerHeight / 2});
-	    $(".project-description-paragraph").css("padding-top", 0);
-	    $(".project-description-paragraph").css("padding-bottom", 0);
-		$(".project-page").css("height", "100%");
+    var width = window.innerWidth;
+    paragraphGrid(".pdp-1", 800);
+    paragraphGrid(".pdp-2", 800);
+    paragraphGrid(".pdp-3", 800);
+    if (772 <= width && width < 1200) {
+        $(".container").css("width", "90%");
+        $(".project-picture").css("width", "50%");
+        $(".project-description").css("width", "50%");
+        $(".project-page").css("height", "50%");
+        paragraphGrid("#introduction-paragraph", window.innerHeight);
+    } else if (width < 772) {
+        paragraphGrid("#introduction-paragraph", window.innerHeight);
+        $(".project-picture").css({
+            "width": "100%",
+            "height": window.innerHeight / 2
+        });
+        $(".project-description").css({
+            "width": "100%",
+            "height": window.innerHeight / 2
+        });
+        $(".project-description-paragraph").css("padding-top", 0);
+        $(".project-description-paragraph").css("padding-bottom", 0);
+        $(".project-page").css("height", "100%");
 
-	} else if (1200 <= width) {
-		$(".container").css("width", "70%");
-		paragraphGrid("#introduction-paragraph", window.innerHeight);
-		$(".project-picture").css("width", "50%");
-		$(".project-description").css("width", "50%");
-		$(".project-page").css("height", "400px");
-	}	
+    } else if (1200 <= width) {
+        $(".container").css("width", "70%");
+        paragraphGrid("#introduction-paragraph", window.innerHeight);
+        $(".project-picture").css("width", "50%");
+        $(".project-description").css("width", "50%");
+        $(".project-page").css("height", "400px");
+    }
 }
 
 function redirect() {
-	$(".voyager-picture").click(function() {
-		window.location.href = "http://www.voyagerconsulting.org"
-	});
-	$(".decal-picture").click(function() {
-		window.location.href = "http://decal.herokuapp.com"
-	});
-	$(".mousehunt-picture").click(function() {
-		window.location.href = "https://github.com/felixitous/automation"
-	});
-	$(".fa-linkedin").click(function() {
-		window.location.href = "https://www.linkedin.com/in/felixwenshanliu"
-	});
-	$(".fa-facebook-official").click(function() {
-		window.location.href = "https://www.facebook.com/DenimJacketsArentDeceiving"
-	});
-	$(".fa-github").click(function() {
-		window.location.href = "https://github.com/felixitous"
-	});
-	$(".fa-envelope").click(function() {
-		window.location.href = "mailto:felixmbx@gmail.com"
-	});
+    $(".voyager-picture").click(function() {
+        window.location.href = "http://www.voyagerconsulting.org"
+    });
+    $(".decal-picture").click(function() {
+        window.location.href = "http://decal.herokuapp.com"
+    });
+    $(".mousehunt-picture").click(function() {
+        window.location.href = "https://github.com/felixitous/automation"
+    });
+    $(".fa-linkedin").click(function() {
+        window.location.href = "https://www.linkedin.com/in/felixwenshanliu"
+    });
+    $(".fa-facebook-official").click(function() {
+        window.location.href = "https://www.facebook.com/DenimJacketsArentDeceiving"
+    });
+    $(".fa-github").click(function() {
+        window.location.href = "https://github.com/felixitous"
+    });
+    $(".fa-envelope").click(function() {
+        window.location.href = "mailto:felixmbx@gmail.com"
+    });
 }
 
 function footerHover() {
-	var target = $(".custom-link")
+    var target = $(".custom-link")
 
-	$(target).mouseenter(function() {
-		TweenMax.to(this, 0.5, {
-			color: '#74AFAB'
-		});
-	});
+    $(target).mouseenter(function() {
+        TweenMax.to(this, 0.5, {
+            color: '#74AFAB'
+        });
+    });
 
-	$(target).mouseleave(function() {
-		TweenMax.to(this, 0.5, {
-			color: "#FFFDEF"
-		});
-	});
+    $(target).mouseleave(function() {
+        TweenMax.to(this, 0.5, {
+            color: "#FFFDEF"
+        });
+    });
 }
 
 
 function heightPlacing() {
-	var height = window.innerHeight;
-	if (height <= 650) {
-		$(".introduction").css("display", "none");
-	} else if (height > 650) {
-		$(".introduction").css("display", "block");
-	}
+    var height = window.innerHeight;
+    if (height <= 650) {
+        $(".introduction").css("display", "none");
+    } else if (height > 650) {
+        $(".introduction").css("display", "block");
+    }
 }
 
 // main page arrow down animation
@@ -135,19 +141,19 @@ $(window).load(function() {
         repeat: -1
     });
     TweenMax.to(".loading-background", 0.3, {
-    	opacity: 0,
-    	display: "none"
+        opacity: 0,
+        display: "none"
     });
-	elasticPlacing();
-	heightPlacing();
+    elasticPlacing();
+    heightPlacing();
 });
 
 $(document).ready(function() {
-	redirect();
-	folderHeight();
-	footerGrid(".links", 200);
-	projectSelection();
-	footerHover();
+    redirect();
+    folderHeight();
+    footerGrid(".links", 200);
+    projectSelection();
+    footerHover();
 });
 
 $(window).resize(function() {
@@ -159,33 +165,93 @@ $(window).resize(function() {
 });
 
 function containerAnimation(target) {
-	TweenMax.to(target, 1, {
-		opacity: 1
-	});
+    TweenMax.to(target, 1, {
+        opacity: 1
+    });
 };
 
 containerSelection = $('.project-page');
 
 function initialDisplay() {
-	var scrollValue = $(window).scrollTop()
-	while (containerSelection.offset().top < scrollValue) {
-		containerAnimation(containerSelection.get(0));
-		containerSelection = containerSelection.next()
-	}
+    var scrollValue = $(window).scrollTop()
+    while (containerSelection.offset().top < scrollValue) {
+        containerAnimation(containerSelection.get(0));
+        containerSelection = containerSelection.next()
+    }
 }
 
 initialDisplay()
 
 $(window).scroll(function() {
-	var scrollValue = $(window).scrollTop();
-	console.log(containerSelection.offset().top);
-	if (containerSelection.offset().top - 600 < scrollValue) {
-		containerAnimation(containerSelection.get(0));
-		containerSelection = containerSelection.next()
-	};
+    var scrollValue = $(window).scrollTop();
+    if (containerSelection.offset().top - 600 < scrollValue) {
+        containerAnimation(containerSelection.get(0));
+        containerSelection = containerSelection.next()
+    };
 })
 
 
+// facebook API import
+window.fbAsyncInit = function() {
+    FB.init({
+        appId: '240843709301754',
+        xfbml: true,
+        version: 'v2.6'
+    });
+
+    // console.log('going here');
+    // FB.get('/webhook/', function (req, res) {
+    //     if (req.query['hub.verify_token'] === '<validation_token>') {
+    //         res.send(req.query['hub.challenge']);
+    //     }
+    //         res.send('Error, wrong validation token');
+    //     })
 
 
 
+};
+
+(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) {
+        return;
+    }
+    js = d.createElement(s);
+    js.id = id;
+    js.src = "https://connect.facebook.net/en_US/sdk.js";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+
+
+var s_ajaxListener = new Object();
+s_ajaxListener.tempOpen = XMLHttpRequest.prototype.open;
+s_ajaxListener.tempSend = XMLHttpRequest.prototype.send;
+s_ajaxListener.callback = function () {
+    console.log('something');
+
+    console.log(this.method);
+  // this.method :the ajax method used
+  // this.url    :the url of the requested script (including query string, if any) (urlencoded) 
+  // this.data   :the data sent, if any ex: foo=bar&a=b (urlencoded)
+}
+
+XMLHttpRequest.prototype.open = function(a,b) {
+  if (!a) var a='';
+  if (!b) var b='';
+  s_ajaxListener.tempOpen.apply(this, arguments);
+  s_ajaxListener.method = a;  
+  s_ajaxListener.url = b;
+  if (a.toLowerCase() == 'get') {
+    s_ajaxListener.data = b.split('?');
+    s_ajaxListener.data = s_ajaxListener.data[1];
+  }
+}
+
+XMLHttpRequest.prototype.send = function(a,b) {
+  if (!a) var a='';
+  if (!b) var b='';
+  s_ajaxListener.tempSend.apply(this, arguments);
+  if(s_ajaxListener.method.toLowerCase() == 'post')s_ajaxListener.data = a;
+  s_ajaxListener.callback();
+}
